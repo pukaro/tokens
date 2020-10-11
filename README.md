@@ -1,5 +1,9 @@
 # Tokens
 
+### MongoDB Compass:
+	mongodb+srv://medods:yD0D3vEXWCtnFkvZ@cluster0.ufzsk.mongodb.net/test
+##
+
 ### Генерация токенов:
 Необходима сделать POST запрос на url: http://tokens-acc-ref.herokuapp.com/generate
 
