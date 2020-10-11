@@ -49,7 +49,8 @@
 	}
 
 Ответ:
-    	http.StatusOK
+
+    http.StatusOK
 ##
 
 ### Удаление Refresh tokens по id:
@@ -62,4 +63,5 @@
 	}
 
 Ответ:
-    	http.StatusOK
+
+    http.StatusOK
