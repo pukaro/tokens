@@ -69,6 +69,7 @@ func GenerateRefresh(accessToken string) (string, error) {
 		return "", err
 	}
 
+	// Вместо подпись можно брать хеш Access token
 	signTokenAcc := ed25519.Sign(PrivateKey, []byte(accessToken))
 	payload := PayloadRefresh{
 		Access: base64.StdEncoding.EncodeToString(signTokenAcc),
@@ -80,6 +81,7 @@ func GenerateRefresh(accessToken string) (string, error) {
 		return "", err
 	}
 
+	// Вместо подпись payload, можно его хешировать
 	singTokenRef := ed25519.Sign(PrivateKey, payloadJSON)
 	refreshToken := base64.StdEncoding.EncodeToString(payloadJSON)
 	refreshToken += "." + base64.StdEncoding.EncodeToString(singTokenRef)
